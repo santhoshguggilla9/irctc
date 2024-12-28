@@ -45,8 +45,6 @@ public class HomePage {
     public void searchTrains(String fromStation, String toStation) {
         clearAndEnterFromStation(fromStation);
         clearAndEnterToStation(toStation);
-        WebElement searchButton = driver.findElement(searchLocator);
-        searchButton.click();
     }
 
     private void scrollDown() {
@@ -80,6 +78,11 @@ public class HomePage {
             }
         }
         return targetDate.format(dayFormatter);
+    }
+    public void submitButton()
+    {
+        WebElement searchButton = driver.findElement(searchLocator);
+        searchButton.click();
     }
 }
 

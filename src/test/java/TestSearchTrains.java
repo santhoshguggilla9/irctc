@@ -56,6 +56,7 @@ public class TestSearchTrains {
         extentReports.setSystemInfo("Tester", "G Santhosh Kumar");
         test = extentReports.createTest("Yatra Test - ");
         test.info("Browser is opened.");
+        Log.info("Browser Opened");
     }
 
     @Test
@@ -76,6 +77,11 @@ public class TestSearchTrains {
                 String travelDate = homePage.selectDateAfterDays(4);
                 Log.info("Searching trains from " + fromStation + " to " + toStation + " on " + travelDate);
                 test.info("Searching trains from " + fromStation + " to " + toStation + " on " + travelDate);
+
+                //clicking submit
+                homePage.submitButton();
+                Log.info("Clicked on search button");
+                test.info("Clicked on search button");
 
                 // Wait for results
                 Thread.sleep(5000); // Replace with WebDriverWait for better synchronization
